@@ -7,3 +7,14 @@
 #4 printf scanf引号后输入变量用，隔开，不能是空格
 #5 在scanf之前就进行计算是错误的，容易出现随机垃圾数。先声明变量，然后scanf，然后加入计算逻辑。
 #6计算逻辑在scanf后，printf前。当然，可以把计算逻辑设成一个变量。加在printf里面such as printf("%d %d %d",a,b,a+b)我们由此引出：int c=a+b 用c取代a+b
+#7 常用占位符速查表
+占位符	对应数据类型	说明
+%d 或 %i	int	十进制整数（最常用）
+%f	float / double	浮点数（小数）。printf里默认保留6位小数
+%lf	double	双精度浮点数。特别提醒：在 scanf 里读 double 必须写 %lf
+%c	char	单个字符（比如 'A', 'b'）
+%s	char[] (字符数组)	字符串（一串字符）
+%u	unsigned int	无符号整数（正整数）
+%x / %X	int	十六进制整数（%x小写，%X大写）
+%p	指针	打印内存地址（等你学指针时才会用到）
+%%	无	输出一个真正的百分号 %
