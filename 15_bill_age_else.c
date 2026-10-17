@@ -14,3 +14,26 @@ else
 printf("short:%d",price-bill);
 return 0;
 }
+##include <stdio.h>
+
+int main() {
+    const int MINOR = 35;
+    int age = 0;
+    // 对应：请输入你的年龄：
+    printf("Enter your age: ");
+    scanf("%d", &age);
+    // 对应：你的年龄是%d岁。
+    printf("Your age is %d.\n", age);
+    if ( age < MINOR ) {
+        // 对应：年轻是美好的，
+        printf("Youth is wonderful, ");
+    } else 
+        // 对应：成熟是一种恩赐，
+        printf("Maturity is a blessing, ");
+    
+    // 对应：年龄决定了你的精神世界，好好珍惜吧。
+    // 这句在 if-else 外面，无论走哪边都会执行
+    printf("Age determines your inner world. Cherish it.\n");
+    
+    return 0;
+}
