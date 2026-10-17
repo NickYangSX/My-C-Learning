@@ -1,3 +1,3 @@
 #1，如果bill代码没第二个if，那么输入条件若不符合第一个if，则输出结果为空白。
-#2，age代码如果不符合if则直接输出最后一个printf内容，如果符合就会加上if里面的printf，再输出最后一个printf
+#2，age代码如果不符合if则直接输出最后一个printf内容，如果符合输出if里面的printf内容
 总结一句话，看if前后有没有printf
