@@ -14,7 +14,7 @@ return 0;
  int main(){
  	int g,s,b;//变量三位数
  	printf("input a three-digit number");
- 	scanf("%d %d %d",&b,&s,&g);
+ 	scanf("%1d%1d%1d",&b,&s,&g);
  	printf("units digit%d,tens digit%d,hundreds digit%d",g,s,b);
  	return 0;
  }
