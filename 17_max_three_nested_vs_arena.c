@@ -19,12 +19,12 @@ int main(){
   return 0;
   }
 
-max#include <stdio.h>
+#include <stdio.h>
 int main(){
-  int a,b,c;
+  int a,b,c，max;
   printf("input three accounts:");
   scanf("%d %d %d",&a,&b,&c);
-  int max=a;
+	max=a;
   if(b>max)
   max=b;
   if(c>max)
