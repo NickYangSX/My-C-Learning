@@ -73,3 +73,40 @@ int main() {
     }
     return 0;
 }
+新增中途推出：
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    srand(time(0));
+    int number = rand() % 100 + 1;
+    int a = 0;
+    int count = 0;
+
+    printf("Guess the number between 1 and 100.\n");
+
+    do {
+        printf("Enter your guess (enter -1 to quit): ");//新增中途退出模式
+        scanf("%d", &a);
+
+        if (a == -1) {
+            printf("Game exited.\n");
+            break;
+        }
+
+        count++;
+
+        if (a > number) {
+            printf("Too high!\n");
+        } else if (a < number) {
+            printf("Too low!\n");
+        } else {
+            printf("Congratulations! You guessed it in %d attempts.\n", count);
+            break;
+        }
+    } while (a != number);
+
+    return 0;
+}
