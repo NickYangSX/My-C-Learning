@@ -88,3 +88,18 @@ n=2
 }while(循环条件）；
 do_while与while唯一区别：do是先进入循环体，然后再判断循环条件，这确保了do一定会先循环一遍。即是先执行后判断，和while反过来。（while可能一次都不执行）
 # 23解决case条件不能是判断语句的问题
+##1 既然 switch 只能吃离散的精准数字，那我们就通过整数除法（/10），把连续的“分数范围”压缩成几个特定的“整数标签”。
+##2嵌入if_else
+int score = 85;
+int class_type = 2;
+if (score >= 60 && score <= 100) {
+    // 外层 if 处理范围，内层 switch 处理具体的班级类型
+    switch (class_type) {
+        case 1: printf("进入A班\n"); break;
+        case 2: printf("进入B班\n"); break;
+        default: printf("待分配\n"); break;
+    }
+} else {
+    printf("成绩不合格，无法分班\n");
+}
+
