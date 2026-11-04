@@ -29,6 +29,7 @@ x/b<1 已知b/b=1,那么x<b
 条件1 x<b 条件2 x>=b-1 结合b-1<=x<b 取整只能x=b-1
 带回原来式子
 (a+x)/b=(a+b-1)/b=/b
+ ## 4辗转相除法(Euclidean algorithm)
  
 
 
