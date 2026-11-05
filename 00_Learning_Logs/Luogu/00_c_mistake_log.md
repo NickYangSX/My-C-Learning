@@ -1,3 +1,7 @@
+## 关于VS格式问题
+如果不想在printf scanf后面加_s，可以选择在include上面加这个
+#define _CRT_SECURE_NO_WARNINGS
+这个代码意思就是告诉VS不要管格式问题，这样你直接输scanf printf也不会报错了
 ## 1 scanf 的格式串是输入匹配规则，它只认"读什么类型"，不认"保留几位小数"
 #关于初始化
 一定记住在i++，或者后续该变量计算式里面有第二个未确定变量时，该变量要初始化（比如a+b=c，scanf读取a b，c自然出来，可以不初始化；scanf只读取a，而b，c未初始化，那么一定要初始化其中一个值）
@@ -55,6 +59,7 @@ int b = (int)a;    // b = 3
 printf("%f",a)//依旧输出a=3.700000
 关于ceil：int a=(int)ceil(2.1) //a=3
 ## 6辗转相除法(Euclidean algorithm)
+
  
 
 
