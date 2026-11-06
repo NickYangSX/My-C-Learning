@@ -58,8 +58,50 @@ ceil 和 floor 永远方向相反（除非本来就是整数）。
 int b = (int)a;    // b = 3
 printf("%f",a)//依旧输出a=3.700000
 关于ceil：int a=(int)ceil(2.1) //a=3
-## 6辗转相除法(Euclidean algorithm)
+## 6卫语句
+卫语句就是：把排除错误情况、边界情况的 if 写在最前面，写完立刻 return 或者 continue，这样剩下的代码就全是最核心的正常逻辑了
+for (int i = 0; i < n; i++) {
+    if (arr[i] == target) {
+        printf("找到了！");
+        break; // 也是一种卫语句：找到了就立刻收工，别浪费时间继续找
+    }
+}
+对比：嵌套（未使用卫语句）
+for (int i = 0; i < n; i++) {
+    if (score[i] >= 60) {  // 只有及格的才处理
+        sum += score[i];
+    }
+}
+使用卫
+for (int i = 0; i < n; i++) {
+    if (score[i] < 60) {
+        continue; // 不及格的直接滚蛋，别碍事
+    }
+    // 这里只剩及格的分数了，专心算总分
+    sum += score[i];
+}
 
+## 7辗转相除法(Euclidean algorithm)
+多用于求最大公约数
+方法:两数相除取余，然后除数除以余数，一直到余数为0
+a%b=c;
+b%c=d,且d=0
+c为最大公约数
+example
+#include <stdio.h>
+int main() {
+    int a, b;
+    scanf("%d %d", &a, &b);
+    // 只要余数不为 0，就一直“辗转”下去
+    while (b != 0) {
+        int temp = a % b; // 算出余数
+        a = b;            // 把原来的除数变成新的被除数
+        b = temp;         // 把余数变成新的除数
+    }
+    // 循环结束后，b 变成了 0，此时 a 就是最大公约数
+    printf("最大公约数是: %d\n", a);
+    return 0;
+}
  
 
 
