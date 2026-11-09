@@ -67,7 +67,7 @@ printf("%f",a)//依旧输出a=3.700000
 关于ceil：int a=(int)ceil(2.1) //a=3
 ## 6卫语句
 卫语句就是：把排除错误情况、边界情况的 if 写在最前面，写完立刻 return 或者 continue，这样剩下的代码就全是最核心的正常逻辑了
-人话：罗列不成立项并跳过，可见./Guard_Clause.c/
+人话：罗列不成立项并跳过，可见[代码示例](./00_Learning_Logs/Luogu/Guard_Clause.c/)
 for (int i = 0; i < n; i++) {
     if (arr[i] == target) {
         printf("找到了！");
