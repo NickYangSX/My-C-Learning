@@ -11,6 +11,12 @@ break循环的哪里？
 4.特殊值检查，可以的话加入assert，并且在提交时删除assert
 0 1 -1，等等
 
+## 关于循环的抉择
+有且已知循环次数，for；
+不知道循环几次:while；
+必须做一次do_while；
+其他while（目前已知）。
+
 ## 关于VS格式问题
 
 如果不想在printf scanf后面加_s，可以选择在include上面加这个
