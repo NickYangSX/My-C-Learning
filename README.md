@@ -1,19 +1,23 @@
-# My-C-Learning
-This repository is used to track my personal C programming learning progress.
+# 🌌 My-C-Learning
 
-**Key Resources / Highlights:**
-* [C Basics Summary](./c_basics_summary.md)
-* [Mistake Log](./00_Learning_Logs/Luogu/00_c_mistake_log.md)
-*
-* ## 🛠️ Environment & Tools
-* **Language:** C
-* **Compiler:** GCC / MinGW
-* **Editor:** VS Code，Dev C++
-* **Version Control:** Git & GitHub
-* ## 📂 Directory Structure
-* `c_basics_summary.md`: Core C language syntax and concept summaries.
-* `00_Learning_Logs/`: Daily logs and Luogu problem-solving records.
-* `Luogu/`: Specific solutions for Luogu problems (e.g., P2029, P5706).
-* `00_c_mistake_log.md`: A log of common bugs and mistakes I've made.
-* `code_in_c/`: General C code practice files.
-* `Learning_log/`: Other learning materials.
+> "Talk is cheap. Show me the code." —— Linus Torvalds
+
+[![Language](https://img.shields.io/badge/Language-C-00599C?style=flat-square&logo=c&logoColor=white)](https://en.wikipedia.org/wiki/C_(programming_language))
+[![Compiler](https://img.shields.io/badge/Compiler-GCC%20%2F%20MinGW-orange?style=flat-square)](https://gcc.gnu.org/)
+[![Editor](https://img.shields.io/badge/Editor-VS%20Code%20%7C%20Dev--C%2B%2B-blue?style=flat-square)](https://code.visualstudio.com/)
+[![VCS](https://img.shields.io/badge/Version%20Control-Git%20%26%20GitHub-black?style=flat-square&logo=github)](https://github.com/)
+
+A dedicated repository to document my C programming journey. It features core syntax summaries, algorithmic problem-solving records (Luogu), and rigorous debugging logs.
+
+---
+
+## 📂 Repository Structure
+
+```text
+📦 My-C-Learning
+ ┣ 📜 c_basics_summary.md      # Core C language syntax and concepts
+ ┣ 📂 00_Learning_Logs          # Daily learning records & Luogu solutions
+ ┃ ┣ 📜 00_c_mistake_log.md     # Bug logs & debugging reflections
+ ┃ ┗ 📂 Luogu                  # Specific solutions (e.g., P2029, P5706)
+ ┣ 📂 code_in_c                # General C code practice files
+ ┗ 📂 Learning_log             # Supplementary learning materials
