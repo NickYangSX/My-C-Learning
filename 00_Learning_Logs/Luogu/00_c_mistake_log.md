@@ -194,7 +194,55 @@ int main() {
     printf("最大公约数是: %d\n", a);
     return 0;
 }
+## 8关于嵌套循环的跳出额外优化方法
+[源代码见此处](/code_in_c/29_break_in_nested_loops.c)
+可以把标志写入循环条件里，如
+int exit = 0;
+for (one = 1; one < x*10 && !exit; one++) {
+    for (two = 1; two < x*10/2 && !exit; two++) {
+        for (five = 1; five < x*10/5; five++) {
+            if (找到目标) {
+                exit = 1; // 只要一变1，外层循环的下一次判断就会直接失败并结束
+                break;
+            }
+        }
+    }
+}
+也可以封装成一个函数，写正式项目和工作时常用
+#include <stdio.h>
 
+// 把找硬币的逻辑封装成一个函数
+void findCoins(int x) {
+    int one, two, five;  // 变量要在函数里面定义
+
+    for (one = 1; one < x*10; one++) {
+        for (two = 1; two < x*10/2; two++) {
+            for (five = 1; five < x*10/5; five++) {
+                
+                // 这里就是真实的“找到目标”的判断条件
+                if (one + two*2 + five*5 == x*10) {
+                    printf("Found: %d one-jiao + %d two-jiao + %d five-jiao = %d yuan\n", one, two, five, x);
+                    
+                    // 真正的魔法：直接结束整个函数！
+                    return; 
+                }
+                
+            }
+        }
+    }
+    // 如果循环全都跑完了还没 return，说明没找到
+    printf("No solution found for %d yuan.\n", x);
+}
+
+int main() {
+    int x;
+    scanf("%d", &x);
+    
+    // 调用函数，把 x 传进去让它自己去找
+    findCoins(x); 
+    
+    return 0;
+}
  
 
 
